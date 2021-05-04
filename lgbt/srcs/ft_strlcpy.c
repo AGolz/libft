@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str.h                                           :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfiora <cfiora@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/02 16:11:47 by cfiora            #+#    #+#             */
-/*   Updated: 2021/05/02 20:40:37 by cfiora           ###   ########.fr       */
+/*   Created: 2021/04/29 16:10:06 by cfiora            #+#    #+#             */
+/*   Updated: 2021/05/03 15:46:29 by cfiora           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STR_H
-# define FT_STR_H
-# include <string.h>
-# include <stddef.h>
+#include "libft.h"
 
-char	*ft_strchr(const char *str, int ch);
-size_t	ft_strlcat(char *dst, const char *src, size_t size);
-size_t	ft_strlcpy (char *dst, const char *src, size_t size);
-size_t	ft_strlen(const char *str);
+size_t	ft_strlcpy (char *dst, const char *src, size_t size)
+{
+	size_t	i;
 
-#endif 
+	i = 0;
+	if (!dst || !src)
+		return (0);
+	if (size == 0)
+		return (ft_strlen(src));
+	while (i < (size - 1) && src[i])
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = 0;
+	return (i);
+}

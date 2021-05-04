@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfiora <cfiora@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/29 21:30:07 by cfiora            #+#    #+#             */
-/*   Updated: 2021/05/02 14:14:16 by cfiora           ###   ########.fr       */
+/*   Created: 2021/04/25 20:01:06 by cfiora            #+#    #+#             */
+/*   Updated: 2021/05/02 20:48:53 by cfiora           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-char	*ft_strchr(const char *str, int ch)
+void	ft_bzero(void *buf, size_t count)
 {
-	char	*s;
+	unsigned char	*ptr;
 
-	s = (char *)str;
-	while (*s != ch)
-	{
-		if (*s == '\0')
-		{
-			return (NULL);
-		}
-		s++;
-	}
-	return (s);
+	ptr = (unsigned char *)buf;
+	while (count-- > 0)
+		*(ptr++) = 0;
 }

@@ -1,23 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str.h                                           :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfiora <cfiora@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/02 16:11:47 by cfiora            #+#    #+#             */
-/*   Updated: 2021/05/02 20:40:37 by cfiora           ###   ########.fr       */
+/*   Created: 2021/05/02 16:32:04 by cfiora            #+#    #+#             */
+/*   Updated: 2021/05/03 15:44:10 by cfiora           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STR_H
-# define FT_STR_H
-# include <string.h>
-# include <stddef.h>
+#include "libft.h"
 
-char	*ft_strchr(const char *str, int ch);
-size_t	ft_strlcat(char *dst, const char *src, size_t size);
-size_t	ft_strlcpy (char *dst, const char *src, size_t size);
-size_t	ft_strlen(const char *str);
+int	ft_atoi(const char *str)
+{
+	int	i;
+	int	negative;
 
-#endif 
+	i = 0;
+	negative = 1;
+	while ((*str >= 9 && *str <= 13) || *str == ' ')
+		str++;
+	if (*str == '-')
+	{
+		negative = -1;
+	}
+	if (*str == '+' || *str == '-')
+		str++;
+	while (*str && *str >= '0' && *str <= '9')
+	{
+		i = i * 10 + (*str - '0');
+		str++;
+	}
+	return (negative * i);
+}

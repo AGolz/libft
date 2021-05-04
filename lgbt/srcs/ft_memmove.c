@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str.h                                           :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfiora <cfiora@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/02 16:11:47 by cfiora            #+#    #+#             */
-/*   Updated: 2021/05/02 20:40:37 by cfiora           ###   ########.fr       */
+/*   Created: 2021/04/26 15:55:43 by cfiora            #+#    #+#             */
+/*   Updated: 2021/05/03 15:45:53 by cfiora           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STR_H
-# define FT_STR_H
-# include <string.h>
-# include <stddef.h>
+#include "libft.h"
 
-char	*ft_strchr(const char *str, int ch);
-size_t	ft_strlcat(char *dst, const char *src, size_t size);
-size_t	ft_strlcpy (char *dst, const char *src, size_t size);
-size_t	ft_strlen(const char *str);
+void	*ft_memmove(void *dst, const void *src, size_t n)
+{
+	unsigned char	*s1;
+	unsigned char	*s2;
 
-#endif 
+	s1 = (unsigned char *)dst;
+	s2 = (unsigned char *)src;
+	if (s1 < s2)
+		while (n--)
+			s1[n] = s2[n];
+	else
+		ft_memcpy(s1, s2, n);
+	return (dst);
+}

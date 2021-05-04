@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str.h                                           :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfiora <cfiora@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/02 16:11:47 by cfiora            #+#    #+#             */
-/*   Updated: 2021/05/02 20:40:37 by cfiora           ###   ########.fr       */
+/*   Created: 2021/04/25 17:58:24 by cfiora            #+#    #+#             */
+/*   Updated: 2021/05/03 15:46:12 by cfiora           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STR_H
-# define FT_STR_H
-# include <string.h>
-# include <stddef.h>
+#include "libft.h"
 
-char	*ft_strchr(const char *str, int ch);
-size_t	ft_strlcat(char *dst, const char *src, size_t size);
-size_t	ft_strlcpy (char *dst, const char *src, size_t size);
-size_t	ft_strlen(const char *str);
+void	*ft_memset(void *buf, int ch, size_t count)
+{
+	unsigned char	*ptr;
 
-#endif 
+	ptr = (unsigned char *)buf;
+	while (count--)
+		*(ptr++) = (unsigned char)ch;
+	 return (buf);
+}

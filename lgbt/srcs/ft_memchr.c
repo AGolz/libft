@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str.h                                           :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfiora <cfiora@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/02 16:11:47 by cfiora            #+#    #+#             */
-/*   Updated: 2021/05/02 20:40:37 by cfiora           ###   ########.fr       */
+/*   Created: 2021/04/28 16:31:33 by cfiora            #+#    #+#             */
+/*   Updated: 2021/05/03 15:44:17 by cfiora           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STR_H
-# define FT_STR_H
-# include <string.h>
-# include <stddef.h>
+#include "libft.h"
 
-char	*ft_strchr(const char *str, int ch);
-size_t	ft_strlcat(char *dst, const char *src, size_t size);
-size_t	ft_strlcpy (char *dst, const char *src, size_t size);
-size_t	ft_strlen(const char *str);
+void	*ft_memchr(const void *arr, int c, size_t n)
+{
+	unsigned char	*str;
 
-#endif 
+	str = (unsigned char *)arr;
+	while (n--)
+	{
+		if (*str == c)
+			return ((void *)str);
+		str++;
+	}
+	return (NULL);
+}
