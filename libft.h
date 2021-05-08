@@ -6,7 +6,7 @@
 /*   By: cfiora <cfiora@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/02 17:46:15 by cfiora            #+#    #+#             */
-/*   Updated: 2021/05/07 03:56:50 by cfiora           ###   ########.fr       */
+/*   Updated: 2021/05/07 21:43:27 by cfiora           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 # include <string.h>
 # include <stdlib.h>
+# include "addfunc.h"
 
 int		ft_atoi(const char *str);
 

@@ -6,7 +6,7 @@
 /*   By: cfiora <cfiora@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/29 18:52:32 by cfiora            #+#    #+#             */
-/*   Updated: 2021/05/03 15:45:19 by cfiora           ###   ########.fr       */
+/*   Updated: 2021/05/09 01:16:36 by cfiora           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t			res;
 	size_t			i;
+	size_t			res;
 
-	res = 0;
 	i = 0;
+	res = 0;
 	while (dst[i] && i < size)
 		i++;
 	while (src[res] && (i + res + 1) < size)

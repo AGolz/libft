@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfiora <cfiora@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/25 20:01:06 by cfiora            #+#    #+#             */
-/*   Updated: 2021/05/08 23:34:24 by cfiora           ###   ########.fr       */
+/*   Created: 2021/05/08 03:08:44 by cfiora            #+#    #+#             */
+/*   Updated: 2021/05/08 06:55:56 by cfiora           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *buf, size_t count)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	unsigned char	*ptr;
+	int		len;
+	char	*str;
 
-	ptr = (unsigned char *)buf;
-	while (count-- > 0)
-		*ptr++ = 0;
+	if (!s1)
+		return (NULL);
+	while (ft_strchr(set, *s1) && *s1)
+		s1++;
+	len = ft_strlen(s1);
+	while (ft_strchr(set, s1[len]) && len)
+		--len;
+	str = ft_substr(s1, 0, (len + 1));
+	return (str);
 }

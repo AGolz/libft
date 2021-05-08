@@ -6,7 +6,7 @@
 /*   By: cfiora <cfiora@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/07 03:56:14 by cfiora            #+#    #+#             */
-/*   Updated: 2021/05/07 03:56:34 by cfiora           ###   ########.fr       */
+/*   Updated: 2021/05/09 01:14:41 by cfiora           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strdup(const char *str)
 {
-	char	*dst;
-	int		len;
 	int		i;
+	int		len;
+	char	*dst;
 
 	len = 0;
 	while (str[len])

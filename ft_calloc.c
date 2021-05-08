@@ -6,7 +6,7 @@
 /*   By: cfiora <cfiora@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/07 03:20:28 by cfiora            #+#    #+#             */
-/*   Updated: 2021/05/07 03:36:26 by cfiora           ###   ########.fr       */
+/*   Updated: 2021/05/09 01:15:10 by cfiora           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 void	*ft_calloc(size_t number, size_t size)
 {
 	char			*dst;
-	unsigned int	sum;
 	unsigned int	i;
+	unsigned int	sum;
 
 	sum = number * size;
 	dst = malloc(sum);
