@@ -6,13 +6,12 @@
 /*   By: cfiora <cfiora@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/07 15:22:45 by cfiora            #+#    #+#             */
-/*   Updated: 2021/05/08 22:53:14 by cfiora           ###   ########.fr       */
+/*   Updated: 2021/05/11 11:32:00 by cfiora           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ADDFUNC_H
 # define ADDFUNC_H
-# include <unistd.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);

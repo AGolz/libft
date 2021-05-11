@@ -6,7 +6,7 @@
 /*   By: cfiora <cfiora@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 22:07:29 by cfiora            #+#    #+#             */
-/*   Updated: 2021/05/10 20:26:20 by cfiora           ###   ########.fr       */
+/*   Updated: 2021/05/11 11:06:16 by cfiora           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ char	**ft_split(char const *s, char c)
 	while (i < strs)
 	{
 		ft_get_nw_strs(&nw_str, &len_nw_str, c);
-		arr[i] = calloc(len_nw_str, sizeof(char));
+		arr[i] = ft_calloc(len_nw_str + 1, sizeof(char));
 		if (!arr[i])
 			return (ft_free_split(arr));
 		ft_strlcpy(arr[i++], nw_str, len_nw_str + 1);

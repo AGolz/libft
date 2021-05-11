@@ -6,7 +6,7 @@
 /*   By: cfiora <cfiora@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/07 03:56:14 by cfiora            #+#    #+#             */
-/*   Updated: 2021/05/09 01:14:41 by cfiora           ###   ########.fr       */
+/*   Updated: 2021/05/11 04:17:43 by cfiora           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strdup(const char *str)
 	len = 0;
 	while (str[len])
 		len++;
-	dst = (char *)malloc(sizeof(char) * (len +1));
+	dst = malloc(sizeof(char) * (len +1));
 	if (!dst)
 		return (NULL);
 	i = 0;

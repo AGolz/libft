@@ -6,7 +6,7 @@
 /*   By: cfiora <cfiora@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 18:26:44 by cfiora            #+#    #+#             */
-/*   Updated: 2021/05/08 18:27:29 by cfiora           ###   ########.fr       */
+/*   Updated: 2021/05/11 06:50:09 by cfiora           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static char	*ft_plus(int n, int len)
 {
 	char	*str;
 
-	str = (char *)malloc(len + 1);
+	str = malloc(len + 1);
 	if (!str)
 		return (NULL);
 	str[len] = '\0';
@@ -49,7 +49,7 @@ static char	*ft_minus(int n, int len)
 {
 	char	*str;
 
-	str = (char *)malloc(len + 2);
+	str = malloc(len + 2);
 	if (!str)
 		return (NULL);
 	len++;
