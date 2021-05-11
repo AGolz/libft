@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfiora <cfiora@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/29 21:30:07 by cfiora            #+#    #+#             */
-/*   Updated: 2021/05/11 02:14:12 by cfiora           ###   ########.fr       */
+/*   Created: 2021/05/11 01:07:00 by cfiora            #+#    #+#             */
+/*   Updated: 2021/05/11 01:12:04 by cfiora           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int ch)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	while (*str && *str != (char)ch)
+	if (!f)
+		return ;
+	while (lst)
 	{
-		str++;
+		(*f)(lst->content);
+		lst = lst->next;
 	}
-	if ((char)ch == *str)
-		return ((char *)str);
-	return (NULL);
 }

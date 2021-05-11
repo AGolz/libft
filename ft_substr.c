@@ -6,7 +6,7 @@
 /*   By: cfiora <cfiora@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/07 21:34:18 by cfiora            #+#    #+#             */
-/*   Updated: 2021/05/08 05:42:54 by cfiora           ###   ########.fr       */
+/*   Updated: 2021/05/11 01:19:22 by cfiora           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		start = s_len;
 	if (len > s_len - start)
 		len = s_len - start;
-	dst = (char *)malloc(len + 1);
+	dst = malloc(len + 1);
 	if (!dst)
 		return (NULL);
 	i = 0;

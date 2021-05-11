@@ -6,7 +6,7 @@
 #    By: cfiora <cfiora@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/02 14:21:55 by cfiora            #+#    #+#              #
-#    Updated: 2021/05/08 23:00:48 by cfiora           ###   ########.fr        #
+#    Updated: 2021/05/11 02:33:39 by cfiora           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,25 +23,34 @@ ft_calloc.c ft_strdup.c \
 ft_substr.c ft_strjoin.c ft_strtrim.c ft_strmapi.c ft_itoa.c ft_split.c \
 ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
+SOURCES_B = ft_lstsize.c ft_lstadd_front.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c \
+ft_lstiter.c ft_lstnew.c ft_lstlast.c ft_lstmap.c
+
 OBJECTS = $(SOURCES:.c=.o)
+OBJECTS_B = $(SOURCES_B:.c=.o)
 
 BLUE = \033[1;36m 
 PINK = \033[1;35m
 RESET = \033[0m
 
-.PHONY: all clean fclean re
+.PHONY: all bonus clean fclean re
 
 all: $(NAME)
 
 $(NAME): $(OBJECTS) 
 	@echo "$(BLUE)...$(RESET)\c"
-	@ar rc $(NAME) $(OBJECTS) 
+	@ar rc $(NAME) $(OBJECTS) $^
 	@ranlib $(NAME)
 	@echo "\n$(NAME): $(BLUE) object files are created $(RESET)"
 	@echo "$(NAME): $(BLUE) $(NAME) created $(RESET)"
-	
+
+bonus: $(OBJECTS_B)
+	@ar rcs $(NAME) $^
+	@echo "\n$(NAME): $(BLUE) bonus object files are created $(RESET)" 
+
+
 clean:  
-	@rm -rf $(OBJECTS)
+	@rm -rf $(OBJECTS) $(OBJECTS_B)
 	@echo "$(NAME): $(PINK) object files are deleted $(RESET)"
 
 fclean: clean

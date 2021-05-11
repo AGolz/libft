@@ -6,7 +6,7 @@
 /*   By: cfiora <cfiora@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 22:07:29 by cfiora            #+#    #+#             */
-/*   Updated: 2021/05/10 19:40:59 by cfiora           ###   ########.fr       */
+/*   Updated: 2021/05/10 20:26:20 by cfiora           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,8 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	strs = ft_get_strs(s, c);
-	if (!(arr = malloc((strs + 1) * sizeof(char *))))
+	arr = malloc((strs + 1) * sizeof(char *));
+	if (!arr)
 		return (NULL);
 	i = 0;
 	nw_str = (char *)s;
@@ -91,10 +92,10 @@ char	**ft_split(char const *s, char c)
 	while (i < strs)
 	{
 		ft_get_nw_strs(&nw_str, &len_nw_str, c);
-		if (!(arr[i] = calloc(len_nw_str, sizeof(char))))
+		arr[i] = calloc(len_nw_str, sizeof(char));
+		if (!arr[i])
 			return (ft_free_split(arr));
-		ft_strlcpy(arr[i], nw_str, len_nw_str + 1);
-		i++;
+		ft_strlcpy(arr[i++], nw_str, len_nw_str + 1);
 	}
 	arr[i] = NULL;
 	return (arr);

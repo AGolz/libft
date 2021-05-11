@@ -6,7 +6,7 @@
 /*   By: cfiora <cfiora@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 22:57:11 by cfiora            #+#    #+#             */
-/*   Updated: 2021/05/09 01:23:06 by cfiora           ###   ########.fr       */
+/*   Updated: 2021/05/11 02:14:40 by cfiora           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,15 @@
 char	*ft_strrchr(const char *str, int ch)
 {
 	char			*ptr;
-	unsigned int	i;
 
 	ptr = NULL;
-	i = 0;
-	while (str[i])
+	while (*str)
 	{
-		if (str[i] == (char)ch)
-			ptr = (char *)&str[i];
-		i++;
+		if (*str == (char)ch)
+			ptr = (char *)str;
+		str++;
 	}
-	if ((char)ch == str[i])
-		return ((char *)&str[i]);
+	if ((char)ch == *str)
+		return ((char *)str);
 	return (ptr);
 }
