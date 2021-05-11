@@ -6,7 +6,7 @@
 /*   By: cfiora <cfiora@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/11 01:13:17 by cfiora            #+#    #+#             */
-/*   Updated: 2021/05/11 02:26:30 by cfiora           ###   ########.fr       */
+/*   Updated: 2021/05/11 03:49:38 by cfiora           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*result;
 	t_list	*elem;
 
-	if (!lst || !f)
+	if (!lst)
 		return (NULL);
 	result = NULL;
 	while (lst)

@@ -6,7 +6,7 @@
 /*   By: cfiora <cfiora@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/11 00:53:40 by cfiora            #+#    #+#             */
-/*   Updated: 2021/05/11 01:06:00 by cfiora           ###   ########.fr       */
+/*   Updated: 2021/05/11 03:27:52 by cfiora           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	t_list	*buf;
+	t_list	*elem;
 
 	if (!lst || !*lst || !del)
 		return ;
 	while (lst && *lst)
 	{
-		buf = (*lst)->next;
+		elem = (*lst)->next;
 		ft_lstdelone(*lst, del);
-		*lst = buf;
+		*lst = elem;
 	}
 }
