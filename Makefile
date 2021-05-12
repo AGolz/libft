@@ -6,14 +6,15 @@
 #    By: cfiora <cfiora@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/02 14:21:55 by cfiora            #+#    #+#              #
-#    Updated: 2021/05/11 02:33:39 by cfiora           ###   ########.fr        #
+#    Updated: 2021/05/13 01:51:40 by cfiora           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
+HEADER = libft.h
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror 
 
 SOURCES = ft_atoi.c \
 ft_bzero.c ft_memccpy.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memmove.c ft_memset.c \
@@ -37,15 +38,16 @@ RESET = \033[0m
 
 all: $(NAME)
 
-$(NAME): $(OBJECTS) 
-	@echo "$(BLUE)...$(RESET)\c"
-	@ar rc $(NAME) $(OBJECTS) $^
+$(NAME): $(OBJECTS) $(HEADER)
+	@echo "$(BLUE)...\n$(RESET)\c"
+	ar rc $(NAME) $?
 	@ranlib $(NAME)
 	@echo "\n$(NAME): $(BLUE) object files are created $(RESET)"
 	@echo "$(NAME): $(BLUE) $(NAME) created $(RESET)"
 
-bonus: $(OBJECTS_B)
-	@ar rcs $(NAME) $^
+bonus: $(OBJECTS_B) $(HEADER)
+	@echo "$(BLUE)...\n$(RESET)\c"
+	ar rcs $(NAME) $?
 	@echo "\n$(NAME): $(BLUE) bonus object files are created $(RESET)" 
 
 

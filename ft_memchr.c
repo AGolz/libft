@@ -6,7 +6,7 @@
 /*   By: cfiora <cfiora@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/28 16:31:33 by cfiora            #+#    #+#             */
-/*   Updated: 2021/05/06 20:03:18 by cfiora           ###   ########.fr       */
+/*   Updated: 2021/05/13 01:40:37 by cfiora           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ void	*ft_memchr(const void *arr, int c, size_t n)
 		i++;
 	if (i == n)
 		return (NULL);
-	return ((void *)&str[i]);
+	return ((void *)(str + i));
 }
