@@ -6,7 +6,7 @@
 #    By: cfiora <cfiora@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/02 14:21:55 by cfiora            #+#    #+#              #
-#    Updated: 2021/05/13 01:51:40 by cfiora           ###   ########.fr        #
+#    Updated: 2021/05/14 23:52:54 by cfiora           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,6 +37,7 @@ RESET = \033[0m
 .PHONY: all bonus clean fclean re
 
 all: $(NAME)
+	@echo $?
 
 $(NAME): $(OBJECTS) $(HEADER)
 	@echo "$(BLUE)...\n$(RESET)\c"
@@ -46,8 +47,9 @@ $(NAME): $(OBJECTS) $(HEADER)
 	@echo "$(NAME): $(BLUE) $(NAME) created $(RESET)"
 
 bonus: $(OBJECTS_B) $(HEADER)
+	ar rc $(NAME) $?
 	@echo "$(BLUE)...\n$(RESET)\c"
-	ar rcs $(NAME) $?
+	@ranlib $(NAME)
 	@echo "\n$(NAME): $(BLUE) bonus object files are created $(RESET)" 
 
 
