@@ -6,7 +6,7 @@
 /*   By: cfiora <cfiora@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/02 16:32:04 by cfiora            #+#    #+#             */
-/*   Updated: 2021/05/11 03:14:53 by cfiora           ###   ########.fr       */
+/*   Updated: 2021/05/15 03:34:56 by cfiora           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,6 @@ int	ft_atoi(const char *str)
 		i = i * 10 + (*str - '0');
 		if (i > 2147483648 && negative == -1)
 			return (0);
-		if (i > 2147483647 && negative == 1)
-			return (-1);
 		str++;
 	}
 	return (negative * (int)i);

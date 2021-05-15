@@ -6,7 +6,7 @@
 /*   By: cfiora <cfiora@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 22:07:29 by cfiora            #+#    #+#             */
-/*   Updated: 2021/05/11 11:06:16 by cfiora           ###   ########.fr       */
+/*   Updated: 2021/05/15 04:32:59 by cfiora           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,14 +60,6 @@ static void	ft_get_nw_strs(char **nw_str, unsigned int *len_nw_str, \
 
 char	**ft_free_split(char **arr)
 {
-	unsigned int	i;
-
-	i = 0;
-	while (arr[i])
-	{
-		free(arr[i]);
-		i++;
-	}
 	free(arr);
 	return (NULL);
 }
