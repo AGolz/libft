@@ -35,6 +35,6 @@ ft_isprint		|
 ft_toupper		|	
 ft_tolower		|
 
-[Project instructions](/libft.en.pdf)
+[Project instructions](/en.subject.pdf)
 
 need help: cfiora@student.21-school.ru
