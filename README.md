@@ -8,6 +8,8 @@
 
 The purpose of this project is to create own C library.
 
+The project consists of 3 sections:
+
 1.  **Libc Functions:** Some of the standard C functions
 2.  **Additional functions:** Functions 42 deems will be useful for later projects
 3.  **Bonus Functions:** Functions 42 deems will be useful for linked list manipulation
@@ -37,4 +39,6 @@ ft_tolower		|
 
 [Project instructions](/en.subject.pdf)
 
-need help: cfiora@student.21-school.ru
+Need help: cfiora@student.21-school.ru
+
+Special thanks: [@aleliver] for the [libft-unit-test](https://github.com/alelievr/libft-unit-test) and [@jtoty] for the [Libftest](https://github.com/jtoty/Libftest) (:
