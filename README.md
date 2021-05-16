@@ -1,6 +1,6 @@
 # libft
 
-**Libft (42cursus) 2021**
+**Libft ([42cursus](https://www.42.fr)) 2021**
 
 **Actual Status** : Finished
 
