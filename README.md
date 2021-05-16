@@ -1,10 +1,10 @@
 # libft
 
-Libft (42cursus) 2021
+**Libft (42cursus) 2021
 
-Actual Status : finished
+**Actual Status** : finished
 
-Result : 115%
+**Result** : 115%
 
 The purpose of this project is to create own C library.
 
