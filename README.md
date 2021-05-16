@@ -41,4 +41,4 @@ ft_tolower		|
 
 Need help: cfiora@student.21-school.ru
 
-Special thanks: [@aleliver] for the [libft-unit-test](https://github.com/alelievr/libft-unit-test) and [@jtoty] for the [Libftest](https://github.com/jtoty/Libftest) (:
+Special thanks: [aleliver](https://github.com/alelievr) for the [libft-unit-test](https://github.com/alelievr/libft-unit-test) and [jtoty](https://github.com/jtoty) for the [Libftest](https://github.com/jtoty/Libftest) (:
