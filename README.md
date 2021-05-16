@@ -12,7 +12,7 @@ The purpose of this project is to create own C library.
 3.  **Bonus Functions:** Functions 42 deems will be useful for linked list manipulation
 
 Libc functions | Additional functions | Bonus Functions 
-:----------- | :-----------: | :-----------: 
+:-----------: | :-----------: | :-----------: 
 ft_bzero | ft_calloc | ft_lstadd_front
 ft_memchr		| ft_strdup		| ft_lstadd_back
 ft_memcpy		| ft_substr	| ft_lstdelone
