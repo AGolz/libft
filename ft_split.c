@@ -58,7 +58,7 @@ static void	ft_get_nw_strs(char **nw_str, unsigned int *len_nw_str, \
 	}	
 }
 
-char	**ft_free_split(char **arr)
+static char	**ft_free_split(char **arr)
 {
 	free(arr);
 	return (NULL);
