@@ -20,7 +20,7 @@ ft_memccpy		| ft_strjoin		| ft_lstclear
 ft_memmove		| ft_strtrim		| ft_lstiter
 ft_memset		| ft_strmapi	| ft_lstnew
 ft_strncmp		| ft_itoa	| ft_lstlast
-ft_strchr		| t_split		| ft_lstmap
+ft_strchr		| ft_split		| ft_lstmap
 ft_strrchr		| ft_putchar_fd	|				
 ft_strnstr		| ft_putstr_fd		|
 ft_strlcat		| ft_putendl_fd	|
