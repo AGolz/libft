@@ -29,7 +29,7 @@ ft_strnstr		| ft_putstr_fd		|
 ft_strlcat		| ft_putendl_fd	|
 ft_strlcpy		| ft_putnbr_fd	|
 ft_strlen		|
-sft_isalpha		|
+ft_isalpha		|
 ft_isdigit		|
 ft_isalnum		|
 ft_isascii		|
