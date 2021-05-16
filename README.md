@@ -2,7 +2,7 @@
 
 **Libft (42cursus) 2021**
 
-**Actual Status** : finished
+**Actual Status** : Finished
 
 **Result** : 115%
 
