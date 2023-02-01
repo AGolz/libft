@@ -39,6 +39,6 @@ ft_tolower		|
 
 [Project instructions](/en.subject.pdf)
 
-Need help: cfiora@student.21-school.ru
+Need help: emaksimo@student.42yerevan.am
 
 Special thanks: [aleliver](https://github.com/alelievr) for the [libft-unit-test](https://github.com/alelievr/libft-unit-test) and [jtoty](https://github.com/jtoty) for the [Libftest](https://github.com/jtoty/Libftest) (:
